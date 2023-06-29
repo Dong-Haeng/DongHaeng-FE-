@@ -1,0 +1,15 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-navigation>span:nth-child(1){
+    font-size: 35px;
+}
+
+.header-navigation>span:not(:nth-child(1)){
+    font-size: 28px;
+    color: #858585;
+}
