@@ -84,3 +84,10 @@
     background: #3CAEDF;
     color: white;
 }
+
+.header-user-img{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: #3CAEDF;
+}

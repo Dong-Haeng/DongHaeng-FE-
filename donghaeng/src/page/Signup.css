@@ -47,6 +47,11 @@ color: white;
 font-weight: 600;
 }
 
+.Certified-btn :hover ,
+.Signup-Btn :hover{
+    cursor: pointer;
+}
+
 .Signup-Btn{
     background-color: #3CAEDF;
     font-weight: 700;

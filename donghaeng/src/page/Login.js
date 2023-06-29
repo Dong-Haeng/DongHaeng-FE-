@@ -1,30 +1,46 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import axios from 'axios';
 import "./Login.css";
+import { useDispatch, useSelector } from "react-redux";
+import { setManger, setUserID, setlogin } from "../reducers/data";
+import { useNavigate } from "react-router-dom";
 
 
 
 export default function Login(){
+
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     const [ID, setID] = useState("");
     const [PW, setPW] = useState("");
 
     const TryLogin = async () =>{
 
-        try {
-        const { data } = await axios.post("/api/user/login", {
-            headers: {
-                'ngrok-skip-browser-warning': '69420'
-            },
-            data:{
-                "email" : ID,
-                "password" : PW
-            }
-        });
+        console.log(PW)
 
-            console.log({data});
+        try {
+
+            const data ={
+                email :ID,
+                password: PW,
+            }
+
+            const  response  = await axios.post("/api/user/login", data);
+
+            console.log(response.data)
+
+            dispatch(setUserID(response.data.id));
+            if(response.data.president === true){
+                dispatch(setManger());
+            }
+            dispatch(setlogin());
+
+            navigate("/");
+            
         } catch(err) {
             console.log("Try Login Err", err);
+            alert("로그인 실패");
         }
     }
 

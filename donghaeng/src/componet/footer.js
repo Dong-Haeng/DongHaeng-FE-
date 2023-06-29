@@ -3,7 +3,25 @@ import React from "react"
 function footer(){
     return(
         <div>
-            동행
+            <p>동행</p>
+
+            <div>
+                <div>
+
+                </div>
+
+                <div>
+
+                </div>
+
+                <div>
+
+                </div>
+
+                <div>
+                    
+                </div>
+            </div>
         </div>
     )
 }

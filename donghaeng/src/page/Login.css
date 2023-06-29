@@ -1,5 +1,5 @@
 .Layout-input>input{
-    width: 200px;
+    width: 270px;
     padding: 10px 15px;
     border-radius: 5px;
     border: 1px solid #939393;
@@ -19,7 +19,7 @@
 }
 
 .login-findPW{
-    width: 221.6px;
+    width: 301.6px;
     text-align: end;
     font-size: 12px;
     color: gray;
@@ -27,7 +27,7 @@
 }
 
 .login-button{
-    width: 100px;
+    width: 301.6px;
     background-color: #3CAEDF;
     border-radius: 10px;
     border: none;

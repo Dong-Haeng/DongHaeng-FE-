@@ -1,8 +1,12 @@
 import React, { useEffect, useState } from "react";
 
 import "./Signup.css";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 export default function Signup(){
+
+    const navigate = useNavigate();
 
     const [ID, setID] = useState("");
     const [PW, setPW] = useState("");
@@ -45,7 +49,46 @@ export default function Signup(){
     },[CPW])
 
     const GetUniver =() =>{
-        setUniver("KONKUK");
+
+        if(ID===""){
+            alert("이메일을 적어주세요")
+        }else{
+            setUniver("KONKUK");
+        }
+    }
+
+    const ComeIN = async () =>{
+        if(ID==="" || PW==="" || CPW==="" || PW!==CPW || Name==="" || Phone===""){
+            alert("정보를 입력해주세요")
+        }else if(Phone.length !== 11){
+            alert("올바르지 않은 전화번호입니다.")
+        }else{
+            console.log(Name, ID, PW, Phone, Univer)
+
+            
+
+
+            try{
+                const data ={
+                    name: Name,
+                    email: ID,
+                    password: PW,
+                    phone: Phone,
+                    university: Univer,
+                }
+
+                const {response} = await axios.post("/api/user/signUp", data);
+
+                console.log({response});
+
+                alert("회원가입 완료");
+
+                navigate("/login");
+
+            }catch(err){
+                console.log("Error! " ,err)
+            }
+        }
     }
 
 
@@ -89,7 +132,7 @@ export default function Signup(){
                 <p>* '-'를 제외하고 적어주세요</p>
             </div>
 
-            <div className="Signup-Btn"> <span>회원가입</span></div>
+            <div className="Signup-Btn" onClick={ComeIN}> <span>회원가입</span></div>
 
         </div>
     );
