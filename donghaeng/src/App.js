@@ -5,6 +5,7 @@ import Footer from './componet/footer';
 import main from './page/main';
 import Login from './page/Login';
 import Signup from './page/Signup';
+import Select from './page/Select';
 
 import { Route, Routes } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
@@ -35,6 +36,7 @@ function App() {
         <Route path='/' Component={main}/>
         <Route path='/login' Component={Login}/>
         <Route path='/signup' Component={Signup}/>
+        <Route path='/select' Component={Select}/>
       </Routes>
 
       <Footer/>

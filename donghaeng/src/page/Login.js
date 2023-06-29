@@ -28,13 +28,16 @@ export default function Login(){
 
             const  response  = await axios.post("/api/user/login", data);
 
-            console.log(response.data)
+            console.log("response", response)
 
             dispatch(setUserID(response.data.id));
             if(response.data.president === true){
                 dispatch(setManger());
             }
             dispatch(setlogin());
+
+            const session = await response;
+            localStorage.setItem('session', JSON.stringify(session));
 
             navigate("/");
             

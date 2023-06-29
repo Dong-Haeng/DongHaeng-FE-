@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import "./header.css";
 import { useSelector } from "react-redux";
@@ -9,14 +9,23 @@ function Header(){
 
     const { isLogin } = useSelector(state => state.data);
     const { isManger } = useSelector(state => state.data);
+    const navigate = useNavigate();
+
+    const MoveToSelect =() =>{
+        navigate("/select")
+    }
+
+    const MoveToMain =() =>{
+        navigate("/")
+    }
 
     return(
         <div className="header">
             <div className="header-navigation">
-                <span>동행</span>
+                <span onClick={MoveToMain}>동행</span>
                 <div id="menu">
                     <ul>
-                        <li> <span className="sub-navigate">모집</span> </li>
+                        <li> <span className="sub-navigate" onClick={MoveToSelect}> 모집</span> </li>
                         {
                             isManger===true?
                             <li>  <span className="sub-navigate">동아리</span>
