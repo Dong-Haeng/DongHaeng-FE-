@@ -1,4 +1,5 @@
 .header{
+    top: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -31,7 +32,7 @@
 .sub-navigate{
     margin-right: 20px;
     font-size: 20px;
-    color: #000000c7;
+    color: #616161c7;
 }
 
 .sub-navigate:hover{
@@ -40,10 +41,15 @@
     text-shadow: 0px 3px 2px #b7b7b747;
 }
 
-.header-active>span{
+.header-active>span>a{
     font-weight: 600;
     color: #8484847d;
     margin-right: 20px;
+}
+
+.header-active>span>a:hover{
+    cursor: pointer;
+    color: rgb(58, 58, 58);
 }
 
 #menu > ul > li {

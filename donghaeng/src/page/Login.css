@@ -1,0 +1,43 @@
+.Layout-input>input{
+    width: 200px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #939393;
+    font-size: 15px;
+}
+
+.Layout-input>label{
+    font-size: 13px;
+    margin: 0px 0px 3px 0px;
+}
+
+.login-title{
+    font-size: 30px;
+    color: #3CAEDF;
+    font-weight: 600;
+    margin: 70px 0px 30px 0px
+}
+
+.login-findPW{
+    width: 221.6px;
+    text-align: end;
+    font-size: 12px;
+    color: gray;
+    margin: 0px 0px 30px 0px;
+}
+
+.login-button{
+    width: 100px;
+    background-color: #3CAEDF;
+    border-radius: 10px;
+    border: none;
+    font-size: 13px;
+    font-weight: 800;
+    color: white;
+    padding: 10px 5px;
+    margin: 0px 0px 10px 0px;
+}
+
+.login-button:hover{
+    cursor: pointer;
+}

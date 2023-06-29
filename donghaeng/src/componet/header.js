@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import "./header.css";
 
@@ -24,8 +25,8 @@ function header(){
             </div>
 
             <div className="header-active">
-                <span>로그인</span>
-                <span>로그아웃</span>
+                <span> <Link to="/login"> 로그인 </Link></span>
+                <span> <Link to="/signup">회원가입</Link> </span>
             </div>
         </div>
     )
