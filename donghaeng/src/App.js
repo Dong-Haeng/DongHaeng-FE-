@@ -1,6 +1,6 @@
 import './App.css';
 
-import Header from './componet/Header'
+import Header from './componet/header'
 import Footer from './componet/footer';
 import main from './page/main';
 import Login from './page/Login';

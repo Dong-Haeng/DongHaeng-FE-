@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import Drop from "../componet/category/Drop";
+import Drop from "../componet/category/drop";
 
 import List from "../componet/list/List";
 
